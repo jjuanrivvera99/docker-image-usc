@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -12,22 +12,22 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     # Install apache
     apache2 \
     # Install php 7.0
-    php7.2 \
-    libapache2-mod-php7.2 \
-    php7.2-cli \
-    php7.2-json \
-    php7.2-curl \
-    php7.2-fpm \
-    php7.2-dev \
-    php7.2-gd \
-    php7.2-ldap \
-    php7.2-mbstring \
-    php7.2-mysql \
-    php7.2-soap \
-    php7.2-sqlite3 \
-    php7.2-xml \
-    php7.2-zip \
-    php7.2-intl \
+    php7.0 \
+    libapache2-mod-php7.0 \
+    php7.0-cli \
+    php7.0-json \
+    php7.0-curl \
+    php7.0-fpm \
+    php7.0-dev \
+    php7.0-gd \
+    php7.0-ldap \
+    php7.0-mbstring \
+    php7.0-mysql \
+    php7.0-soap \
+    php7.0-sqlite3 \
+    php7.0-xml \
+    php7.0-zip \
+    php7.0-intl \
     php-imagick \
     libldap2-dev \
     libaio1 \
@@ -84,7 +84,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN locale-gen en_US.UTF-8 en_GB.UTF-8 de_DE.UTF-8 es_ES.UTF-8 fr_FR.UTF-8 it_IT.UTF-8 km_KH sv_SE.UTF-8 fi_FI.UTF-8
 
 # Configure PHP for TYPO3
-COPY typo3.ini /etc/php/7.2/mods-available/
+COPY typo3.ini /etc/php/7.0/mods-available/
 RUN phpenmod typo3
 # Configure apache for TYPO3
 RUN a2enmod rewrite expires
