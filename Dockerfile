@@ -38,10 +38,8 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     graphicsmagick \
     imagemagick \
     ghostscript \
-    mysql-client \
     iputils-ping \
     locales \
-    sqlite3 \
     rlwrap \
     php-pear \
     make \
