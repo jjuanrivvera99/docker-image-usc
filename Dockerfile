@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 COPY ./oracle-client /tmp
+COPY ./queue-laravel.conf /etc/supervisor/conf.d/queue-laravel.conf
 
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
@@ -43,6 +44,7 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     rlwrap \
     php-pear \
     make \
+    supervisor \
     cmake \
     unzip \
     zip \
@@ -73,7 +75,11 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     phpize &&\
     ./configure --with-oci8=instantclient,/opt/oracle/instantclient_12_2/ &&\
     make install &&\
-    echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8
+    echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8 \
+    service supervisor restart \
+    supervisorctl reread \
+    supervisorctl update \
+    supervisorctl start queue-laravel:* 
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
