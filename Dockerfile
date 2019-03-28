@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 COPY ./oracle-client /tmp
 #CI/CD script helper
 COPY ci_cd_script /usr/local/bin
+RUN chmod +x /usr/local/bin
 
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
