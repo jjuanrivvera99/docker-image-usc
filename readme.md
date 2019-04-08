@@ -24,7 +24,7 @@ Ubuntu 16.04 + Apache 2 + PHP 7.0 + Oracle Client 12.2 + Script for CI/CD with l
     services:
         web:
             container_name: container_name
-                image: jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:dgi
+                image: jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:tagname
             ports:
                 - 80:80
                 - 443:443
