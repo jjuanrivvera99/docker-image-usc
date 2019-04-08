@@ -15,7 +15,7 @@ Ubuntu 16.04 + Apache 2 + PHP 7.0 + Oracle Client 12.2 + Script for CI/CD with l
 
 ### Command: 
 
-- docker run jjuanrivvera/ubuntu18.04-apache2-php7.2-oracleclient12.2:tag -p 80:80 -p 443:443 -v /var/www:/your_project_path
+- docker run jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:tag -p 80:80 -p 443:443 -v /your_project_path:/var/www
 
 ### Running container with docker compose file
 
@@ -24,7 +24,7 @@ Ubuntu 16.04 + Apache 2 + PHP 7.0 + Oracle Client 12.2 + Script for CI/CD with l
     services:
         web:
             container_name: container_name
-                image: jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:tagname
+            image: jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:tagname
             ports:
                 - 80:80
                 - 443:443
