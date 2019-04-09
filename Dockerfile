@@ -15,22 +15,23 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     # Install apache
     apache2 \
     # Install php 7.0
-    php7.0 \
-    libapache2-mod-php7.0 \
-    php7.0-cli \
-    php7.0-json \
-    php7.0-curl \
-    php7.0-fpm \
-    php7.0-dev \
-    php7.0-gd \
-    php7.0-ldap \
-    php7.0-mbstring \
-    php7.0-mysql \
-    php7.0-soap \
-    php7.0-sqlite3 \
-    php7.0-xml \
-    php7.0-zip \
-    php7.0-intl \
+    php7.2 \
+    libapache2-mod-php7.2 \
+    php7.2-cli \
+    php7.2-json \
+    php7.2-curl \
+    php7.2-fpm \
+    php7.2-dev \
+    php7.2-gd \
+    php7.2-ldap \
+    php7.2-mbstring \
+    php7.2-bcmath \
+    php7.2-mysql \
+    php7.2-soap \
+    php7.2-sqlite3 \
+    php7.2-xml \
+    php7.2-zip \
+    php7.2-intl \
     php-imagick \
     libldap2-dev \
     libaio1 \
@@ -76,7 +77,7 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     phpize &&\
     ./configure --with-oci8=instantclient,/opt/oracle/instantclient_12_2/ &&\
     make install &&\
-    echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8
+    echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8 
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
