@@ -29,25 +29,20 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     php7.2-xml \
     php7.2-zip \
     php7.2-intl \
-    php-imagick \
     libldap2-dev \
     libaio1 \
     libaio-dev \
     # Install tools
     openssl \
     nano \
-    graphicsmagick \
-    imagemagick \
     ghostscript \
     iputils-ping \
     locales \
     rlwrap \
     php-pear \
     make \
-    cmake \
     unzip \
     zip \
-    gzip \
     tar \
     ca-certificates \
     && apt-get clean &&\
