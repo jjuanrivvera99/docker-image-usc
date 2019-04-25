@@ -7,6 +7,10 @@ COPY ./oracle-client /tmp
 COPY ci_cd_script /bin/ci_cd_script
 RUN chmod +x /bin/ci_cd_script
 
+#Refresh users script
+COPY refresh_users /bin/refresh_users
+RUN chmod +x /bin/refresh_users
+
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
     curl \
