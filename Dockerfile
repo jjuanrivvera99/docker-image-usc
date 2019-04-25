@@ -99,7 +99,7 @@ RUN a2ensite my-site.conf
 
 EXPOSE 80 443
 
-WORKDIR /var/www/html
+WORKDIR /var/www/
 
 # RUN rm index.html
 
