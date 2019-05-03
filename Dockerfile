@@ -15,6 +15,8 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
     apt-transport-https \
     curl \
+    gnupg2 \
+    wget \
     # Install git
     git \
     # Install apache
