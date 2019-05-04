@@ -60,9 +60,10 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     gzip \
     tar \
     ca-certificates \
-    && apt-get clean &&\
-    # Install Oracle Client
-    cd /opt &&\
+    && apt-get clean
+
+# Install Oracle Client
+RUN cd /opt &&\
     mkdir oracle &&\
     mv /tmp/instantclient* /opt/oracle/ &&\
     cd /opt/oracle/ &&\
@@ -90,6 +91,10 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
 RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
 RUN dpkg -i /chrome.deb || apt-get install -yf
 RUN rm /chrome.deb
+
+# Install chromedriver for Selenium
+RUN curl https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip -o /usr/local/bin/chromedriver
+RUN chmod +x /usr/local/bin/chromedriver
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
