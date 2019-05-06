@@ -3,13 +3,18 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 COPY ./oracle-client /tmp
-#CI/CD script helper
-COPY ci_cd_script /bin/ci_cd_script
-RUN chmod +x /bin/ci_cd_script
+
+#Update composer script helper
+COPY update /bin/update
+RUN chmod +x /bin/update
 
 #Refresh users script
 COPY refresh_users /bin/refresh_users
 RUN chmod +x /bin/refresh_users
+
+#Test command
+COPY dusk /bin/dusk
+RUN chmod +x /bin/dusk
 
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
