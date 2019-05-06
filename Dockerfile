@@ -126,6 +126,9 @@ RUN a2ensite my-site.conf
 #Create user dgi
 RUN useradd -u 1000 dgi
 
+#Create user gitlab-runner
+RUN useradd -u 1003 gitlab-runner
+
 EXPOSE 80 443
 
 WORKDIR /var/www/
