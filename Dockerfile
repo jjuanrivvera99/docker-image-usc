@@ -119,6 +119,9 @@ COPY my-site.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
 RUN a2ensite my-site.conf
 
+#Create user dgi
+RUN useradd -u 1000 dgi
+
 EXPOSE 80 443
 
 WORKDIR /var/www/

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cp .env.example .env
+composer install -d USC
+chown dgi:dgi -R vendor
+php /var/www/USC/artisan config:cache
+php /var/www/USC/artisan route:clear
+php /var/www/USC/artisan view:clear
