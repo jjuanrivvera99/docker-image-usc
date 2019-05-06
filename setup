@@ -3,6 +3,10 @@
 cp USC/.env.example USC/.env
 composer install -d USC
 chown dgi:dgi -R vendor
+mv USC/storage/framework/cache USC/storage/framework/_cache
+mkdir USC/storage/framework/views
+mkdir USC/storage/framework/sessions
+mkdir USC/storage/framework/cache
 php /var/www/USC/artisan config:cache
 php /var/www/USC/artisan route:clear
 php /var/www/USC/artisan view:clear
