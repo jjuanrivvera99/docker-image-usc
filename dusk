@@ -1,3 +1,4 @@
 #!/bin/sh
 
-php /var/www/USC/artisan dusk
+cd /var/www/USC/
+php artisan dusk
