@@ -12,6 +12,10 @@ RUN chmod +x /bin/update
 COPY refresh_users /bin/refresh_users
 RUN chmod +x /bin/refresh_users
 
+#Setup script
+COPY setup /bin/setup
+RUN chmod +x /bin/setup
+
 #Test command
 COPY dusk /bin/dusk
 RUN chmod +x /bin/dusk
