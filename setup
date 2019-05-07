@@ -2,5 +2,5 @@
 
 cp USC/.env.example USC/.env
 composer install -d USC
-chown gitlab-runner:gitlab-runner -R vendor
+chown gitlab-runner:gitlab-runner -R USC/vendor
 chmod 775 USC/storage USC/bootstrap -R
