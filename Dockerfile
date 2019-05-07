@@ -20,6 +20,10 @@ RUN chmod +x /bin/setup
 COPY dusk /bin/dusk
 RUN chmod +x /bin/dusk
 
+#Magical command
+COPY fix /bin/fix
+RUN chmod +x /bin/fix
+
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \
     apt-transport-https \

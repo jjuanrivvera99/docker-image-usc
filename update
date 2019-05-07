@@ -1,5 +1,2 @@
 #!/bin/sh
 composer update -d /var/www/USC/
-php /var/www/USC/artisan config:cache
-php /var/www/USC/artisan route:clear
-php /var/www/USC/artisan view:clear
