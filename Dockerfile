@@ -20,6 +20,10 @@ RUN chmod +x /bin/setup
 COPY dusk /bin/dusk
 RUN chmod +x /bin/dusk
 
+#UnitTest command
+COPY unit /bin/unit
+RUN chmod +x /bin/unit
+
 #Magical command
 COPY fix /bin/fix
 RUN chmod +x /bin/fix

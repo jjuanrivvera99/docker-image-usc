@@ -1,2 +1,2 @@
 #!/bin/sh
-composer update -d /var/www/USC/
+composer update --working-dir=/var/www/USC/
