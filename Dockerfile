@@ -5,28 +5,48 @@ ENV DEBIAN_FRONTEND=noninteractive
 COPY ./oracle-client /tmp
 
 #Update composer script helper
-COPY update /bin/update
+COPY /bin/update /bin/update
 RUN chmod +x /bin/update
 
 #Refresh users script
-COPY refresh_users /bin/refresh_users
+COPY /bin/refresh_users /bin/refresh_users
 RUN chmod +x /bin/refresh_users
 
 #Setup script
-COPY setup /bin/setup
+COPY /bin/setup /bin/setup
 RUN chmod +x /bin/setup
 
 #Test command
-COPY dusk /bin/dusk
+COPY /bin/dusk /bin/dusk
 RUN chmod +x /bin/dusk
 
 #UnitTest command
-COPY unit /bin/unit
+COPY /bin/unit /bin/unit
 RUN chmod +x /bin/unit
 
 #Magical command
-COPY fix /bin/fix
+COPY /bin/fix /bin/fix
 RUN chmod +x /bin/fix
+
+#Code analysis command
+COPY /bin/code_analysis /bin/code_analysis
+RUN chmod +x /bin/code_analysis
+
+#Code stats command
+COPY /bin/code_stats /bin/code_stats
+RUN chmod +x /bin/code_stats
+
+#Code copy paste detector command
+COPY /bin/copy_paste_detector /bin/copy_paste_detector
+RUN chmod +x /bin/copy_paste_detector
+
+#Security checker command
+COPY /bin/security_checker /bin/security_checker
+RUN chmod +x /bin/security_checker
+
+#Php code sniffer command
+COPY /bin/php_code_sniffer /bin/php_code_sniffer
+RUN chmod +x /bin/php_code_sniffer
 
 RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     apt-utils \

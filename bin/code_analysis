@@ -1,0 +1,3 @@
+#!/bin/sh
+
+php /var/www/USC/artisan code:analyse

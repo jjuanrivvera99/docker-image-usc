@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/var/www/USC/vendor/bin/phpcs -s --report=summary /var/www/USC/app
+
+echo "-----------------------------------------------------------------------"
+
+/var/www/USC/vendor/bin/phpcs --report=gitblame /var/www/USC/app

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+php /var/www/USC/security-checker.phar security:check /var/www/USC/composer.lock
+
+echo "--------------------------------------------------------------"
+
+php /var/www/USC/artisan security-check:now

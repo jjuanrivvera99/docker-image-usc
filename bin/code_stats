@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/var/www/USC/vendor/bin/phploc /var/www/USC/app
