@@ -102,7 +102,7 @@ RUN a2ensite typo3.conf
 
 EXPOSE 80 443
 
-WORKDIR /var/www/html
+WORKDIR /var/www/SIPAC
 
 # RUN rm index.html
 
