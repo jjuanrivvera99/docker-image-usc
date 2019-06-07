@@ -154,6 +154,7 @@ RUN a2dissite 000-default
 RUN a2ensite my-site.conf
 
 #Configure Https
+RUN a2enmod ssl
 COPY default-ssl.conf /etc/apache2/sites-available/
 RUN a2ensite default-ssl.conf
 
