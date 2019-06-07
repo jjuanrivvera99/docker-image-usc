@@ -142,14 +142,20 @@ RUN locale-gen en_US.UTF-8 en_GB.UTF-8 de_DE.UTF-8 es_ES.UTF-8 fr_FR.UTF-8 it_IT
 # Configure PHP for My Site
 COPY my-site.ini /etc/php/7.2/mods-available/
 RUN phpenmod my-site
+
 # Configure apache for My Site
 RUN a2enmod rewrite expires
 RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/servername.conf
 RUN a2enconf servername
+
 # Configure vhost for My Site
 COPY my-site.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
 RUN a2ensite my-site.conf
+
+#Configure Https
+COPY default-ssl.conf /etc/apache2/sites-available/
+RUN a2ensite default-ssl.conf
 
 #Create user dgi
 RUN useradd -u 1000 dgi
