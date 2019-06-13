@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/var/www/SIPAC/vendor/bin/phploc /var/www/SIPAC/app

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+php /var/www/SIPAC/security-checker.phar security:check /var/www/SIPAC/composer.lock
+
+echo "--------------------------------------------------------------"
+
+php /var/www/SIPAC/artisan security-check:now

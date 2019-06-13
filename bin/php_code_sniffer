@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/var/www/SIPAC/vendor/bin/phpcs -s --report=summary /var/www/SIPAC/app
+
+echo "-----------------------------------------------------------------------"
+
+/var/www/SIPAC/vendor/bin/phpcs --report=gitblame /var/www/SIPAC/app

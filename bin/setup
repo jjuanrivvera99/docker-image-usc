@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp USC/.env.example USC/.env
+composer install -d USC

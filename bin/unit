@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /var/www/USC
+./vendor/bin/phpunit --testsuite FeautureTests
