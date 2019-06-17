@@ -1,2 +1,2 @@
 #!/bin/sh
-composer update --working-dir=/var/www/SIPAC/
+composer update --working-dir=/var/www/PlaceToPay/

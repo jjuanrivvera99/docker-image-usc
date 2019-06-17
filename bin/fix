@@ -1,7 +1,7 @@
 #!/bin/sh
 
-php /var/www/SIPAC/artisan config:clear
-php /var/www/SIPAC/artisan config:cache
-php /var/www/SIPAC/artisan cache:clear
-php /var/www/SIPAC/artisan route:clear
-php /var/www/SIPAC/artisan view:clear
+php /var/www/PlaceToPay/artisan config:clear
+php /var/www/PlaceToPay/artisan config:cache
+php /var/www/PlaceToPay/artisan cache:clear
+php /var/www/PlaceToPay/artisan route:clear
+php /var/www/PlaceToPay/artisan view:clear

@@ -1,2 +1,2 @@
 #!/bin/sh
-php /var/www/SIPAC/artisan refresh:users
+php /var/www/PlaceToPay/artisan refresh:users

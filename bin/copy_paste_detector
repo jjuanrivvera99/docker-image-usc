@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/var/www/SIPAC/vendor/bin/phpcpd /var/www/SIPAC/app --min-lines=50
+/var/www/PlaceToPay/vendor/bin/phpcpd /var/www/PlaceToPay/app --min-lines=50
