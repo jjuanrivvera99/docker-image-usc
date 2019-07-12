@@ -5,16 +5,6 @@
 - Ubuntu 18.04 + Apache 2 + PHP 7.2 + Oracle Client 12.2 
 - Apache document root '/var/www/public'
 
-### sipac
-
-- Ubuntu 18.04 + Apache 2 + PHP 7.2 + Oracle Client 12.2 + Supervisor
-- Apache document root '/var/www/html'
-
-### dgi
-
-- Ubuntu 18.04 + Apache 2 + PHP 7.2 + Oracle Client 12.2
-- Apache document root '/var/www/html'
-
 # How to use this image
 
 ### Command: 
